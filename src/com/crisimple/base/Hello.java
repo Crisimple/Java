@@ -1,3 +1,5 @@
+package com.crisimple.base;
+
 import org.w3c.dom.ls.LSOutput;
 
 import java.sql.SQLOutput;
@@ -5,7 +7,7 @@ import java.sql.SQLOutput;
 public class Hello {
     public static void main(String[] args) {
         // 单行注释：输出一个Hello Java
-        System.out.print("Hello Java!");
+        System.out.print("com.base.Hello Java!");
 
         /*
          * 多行注释
@@ -17,13 +19,13 @@ public class Hello {
 
         /**
          * 文档注释
-         * @description: Hello Java
+         * @description: com.base.Hello Java
          * @author: crisimple
          */
 
         /**
          * 文档注释
-         * @description: Hello Java
+         * @description: com.base.Hello Java
          * @author: crisimple
          * 有趣的代码注释
          * @href: https://blog.csdn.net/ydk888888/article/details/81563608

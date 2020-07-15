@@ -1,4 +1,11 @@
+package com.crisimple.base;
+
 public class BaseSyntac {
+    // 类变量
+    static int a64 = 10;
+    // 示例变量，从属于对象的，对象.a65
+    int a65 = 65;
+
     public static void main(String[] args){
         /*
          * 八大数据类型
@@ -49,6 +56,38 @@ public class BaseSyntac {
         System.out.print(salary_1+"\n");
         long salary_2 = money * (long)year;
         System.out.print(salary_2+"\n");
+
+
+        /*
+         * 变量与常量
+         */
+        // 局部变量
+        int a61 = 0;
+        String a62 = "crisimple";
+        char a63 = '7';
+        // 获取实例变量
+        BaseSyntac var1 = new BaseSyntac();
+        System.out.print("实例变量可以通过对象直接使用：" + var1.a65 + "\n");
+        // 默认值，声明变量时不给变量赋予默认值
+        byte a661 = 0;
+        short a662 = 0;
+        int a663 = 0;
+        float a664 = 0;
+        double a665 = 0;
+        char a666 = 0;
+        boolean a667 = false;
+        System.out.print(a661);
+        System.out.print(a662);
+        System.out.print(a663);
+        System.out.print(a664);
+        System.out.print(a665);
+        System.out.print(a666);
+        System.out.print(a667);
+
+
+        /*
+        * 运算符
+        * */
 
     }
 }
