@@ -22,6 +22,19 @@ public class ProcessChoose {
             System.out.println("成绩不及格");
         }
         System.out.println("End");
+
+        // if 多选择结构
+        if (score < 60){
+            System.out.println("不及格");
+        } else if(60 <= score && score < 70){
+            System.out.println("及格");
+        } else if(70 <= score && score < 90){
+            System.out.println("良好");
+        } else if(90 <= score && score <= 100){
+            System.out.println("优秀");
+        } else {
+            System.out.println("输入成绩不正确");
+        }
         scanner.close();
     }
 }
