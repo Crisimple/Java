@@ -9,6 +9,9 @@ public class ProcessChoose {
         System.out.println("if双选择请输入");
         int score = scanner.nextInt();
 
+        /*
+        * if 选择结构
+         */
         // if 单选择结构
         if (s.equals("Hello")){
             System.out.println(s);
@@ -36,5 +39,25 @@ public class ProcessChoose {
             System.out.println("输入成绩不正确");
         }
         scanner.close();
+
+        /*
+        * switch 多分支选择，JDK7 以后支持字符串的比较
+        * */
+        switch (score){
+            case 'A':
+                System.out.println("优秀");
+                break;
+            case 'B':
+                System.out.println("良好");
+                break;
+            case 'C':
+                System.out.println("及格");
+                break;
+            case 'D':
+                System.out.println("再接再厉");
+                break;
+            default:
+                System.out.println("默认输出");
+        }
     }
 }
