@@ -17,9 +17,11 @@ public class Operator {
         System.out.print(a1 % b1 + "\n");
         // 自增
         System.out.print("=====自增=====\n");
-        int c11 = a1++; // a1 = a1 + 1，执行完代码后，先给 b 赋值，a1再自增
+        // a1 = a1 + 1，执行完代码后，先给 b 赋值，a1再自增
+        int c11 = a1++;
         System.out.print(a1 + "\n");
-        int c12 = ++a1; // 执行代码前，a1再自增，先给 b 赋值
+        // 执行代码前，a1再自增，先给 b 赋值
+        int c12 = ++a1;
         System.out.print(a1 + "\n");
         System.out.print(c11 + "\n");
         System.out.print(c12 + "\n");
