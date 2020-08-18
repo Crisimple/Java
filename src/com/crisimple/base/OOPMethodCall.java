@@ -12,14 +12,13 @@ public class OOPMethodCall {
     public static void main(String[] args) {
         // main 方法
         /**
-         * 静态方法直接通过 类.方法名，来调用
+         * 静态方法直接通过 类.静态方法名，来调用
          */
         Person person = new Person();
         Person.say();
-//        person.say();
 
         /**
-         * 通过实例化对象
+         * 通过实例化对象，实例化对象.非静态方法名
          */
         Animal animal = new Animal();
         animal.asay ();
