@@ -33,6 +33,38 @@ public class OopThreeFeatures {
         co.method();
         ch.method();
 
+        /**
+         * 梳理下类之间的关系
+         * China 继承于 Country
+         * China 有 printS() 方法
+         * Country 有 printF() 方法
+         */
+        System.out.println("\n----- 多态 -----");
+        Country co1 = new China();
+        China ch1 = new China();
+        System.out.println("\n..... (1) 父类对象转成子类对象 .....");
+        // true
+        System.out.println("co1 instanceof China: " + (co1 instanceof China));
+        // true
+        System.out.println("ch1 instanceof China: " + (ch1 instanceof China));
+        // 子类重新父类的方法，因此下面两结果均为：China.method()
+        co1.method();
+        ch1.method();
+        System.out.println("\n..... (2) 父类对象转成子类对象（强制转换） .....");
+        // 如果想要让父类获取到子类的特有方法printS()，要将父类对象co1强制转换为子类的类型（高-->低），所以要进行强制类型转换
+        // printF() 为父类的方法，父类对象 co1 可以直接访问结果为：County Method；强制转换后父类对象可以访问到子类独有方法，结果为：China Method
+        co1.printF();
+        ((China) co1).printS();
+        System.out.println("\n..... (3) 子类对象转换为父类对象（自动转换） .....");
+        China ch2 = new China();
+        // 子类对象 ch2 可以直接访问到父类的特有方法 printF()，输出结果为：County Method，因为是继承父类的，所以可以获取到父类的一切！
+        ch2.printF();
+        // 将子类对象强制转换为父类的类型，可能会丢失子类自己本身的一些方法!!!
+        Country ch3 = ch2;
+        ch2.printF();
+        ch2.printS();
+//        ch3.printS();
+
     }
 }
 
@@ -132,4 +164,5 @@ class Country extends Object {
     public void method() {
         System.out.println("Country.method()");
     }
+
 }
