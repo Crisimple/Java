@@ -11,6 +11,11 @@ public class OopVariousClass {
 
     public static void main(String[] args) {
         // main 方法
+
+        /**
+         * 匿名内部类
+         */
+        System.out.println(new OopVariousClass().toString());
     }
 
 
