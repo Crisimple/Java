@@ -7,7 +7,7 @@
 
 package com.crisimple.base;
 
-public class OOPMethodCall {
+public class OopMethodCall {
 
     public static void main(String[] args) {
         // main 方法

@@ -7,7 +7,7 @@
 
 package com.crisimple.base;
 
-public class OOPCreate {
+public class OopCreate {
 
     public static void main(String[] args) {
         // main 方法
