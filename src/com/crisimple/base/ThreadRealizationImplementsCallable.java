@@ -75,3 +75,6 @@ public class ThreadRealizationImplementsCallable implements Callable<Boolean> {
     }
 }
 
+class TempThreadRealizationImplementsCallable {
+    // 空类
+}
