@@ -2,7 +2,7 @@
  * @file ThreadDownloader
  * @author sf
  * @date 2020/8/23 5:14 下午
- * @description
+ * @description 多线程线程下载网图
  */
 
 package com.crisimple.base;

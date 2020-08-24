@@ -7,13 +7,7 @@
 
 package com.crisimple.base;
 
-import org.apache.commons.io.FileUtils;
-
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-
-public class ThreadRealization extends Thread {
+public class ThreadRealizationExtendsThread extends Thread {
 
     @Override
     public void run(){
@@ -27,13 +21,13 @@ public class ThreadRealization extends Thread {
         // main 方法
         // main 线程，主线程
         // 创建线程对象
-        ThreadRealization threadRealization = new ThreadRealization();
+        ThreadRealizationExtendsThread threadRealizationExtendsThread = new ThreadRealizationExtendsThread();
         // 主线程调用 start() 方法，同时开启子线程
-        threadRealization.start();
+        threadRealizationExtendsThread.start();
 
         // 调用子线程方法
-        threadRealization.run();
-        for (int i = 0; i < 1000; i++) {
+        threadRealizationExtendsThread.run();
+        for (int i = 0; i < 1_000; i++) {
             System.out.println("主线程：我在学习多线程----" + i);
         }
     }
