@@ -49,3 +49,7 @@ public class ThreadStatusState {
         thread.start();
     }
 }
+
+class TempThreadStatusState {
+    // 空类
+}
