@@ -36,3 +36,7 @@ public class ThreadStatusJoin implements Runnable{
         }
     }
 }
+
+class TempThreadStatusJoin {
+    // 空类
+}
