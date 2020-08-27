@@ -33,6 +33,8 @@ class Account {
     String cardName;
 
     public Account(int money, String cardName) {
+        this.money = money;
+        this.cardName = cardName;
     }
 }
 
@@ -48,8 +50,8 @@ class TakeMoney extends Thread {
     // 手上有多少钱
     int localMoney;
 
-    public TakeMoney(Account account, int takingMoney, String name) {
-        super(name);
+    public TakeMoney(Account account, int takingMoney, String cardName) {
+        super(cardName);
         this.account = account;
         this.takingMoney = takingMoney;
     }
