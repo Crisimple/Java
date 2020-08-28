@@ -1,6 +1,6 @@
 /**
  * @file ThreadSyncDeadLock
- * @author sf
+ * @author crisimple
  * @date 2020/8/27 12:34 上午
  * @description 死锁
  *  多个线程互相持有对方需要的资源，然后形成僵持
