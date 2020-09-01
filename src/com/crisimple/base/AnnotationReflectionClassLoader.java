@@ -39,3 +39,7 @@ public class AnnotationReflectionClassLoader {
 		// 7、双亲委派机制：自定义和系统类相同的类，比如：java.lang.String，系统会自己找到系统的不会去找自定义的
 	}
 }
+
+class TempAnnotationReflectionClassLoader{
+	// 空类
+}
