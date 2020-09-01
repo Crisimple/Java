@@ -7,7 +7,11 @@
 
 package com.crisimple.base;
 
+import com.sun.org.apache.bcel.internal.classfile.Annotations;
+import com.sun.tools.javac.code.Attribute;
+
 import java.awt.event.MouseWheelEvent;
+import java.lang.annotation.*;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -72,17 +76,38 @@ public class AnnotationReflectionClassStruct {
 		// 获得指定的构造器
 		Constructor declaredConstructors = c1.getDeclaredConstructor(String.class, int.class, int.class);
 		System.out.println("获得指定的构造器：" + declaredConstructors);
+		
+		
+		// 获取注解信息，应用 ORM 映射
+		// 通过反射获得注解
+		Annotation[] annotations = c1.getAnnotations();
+		for (Annotation annotation: annotations){
+			System.out.println("通过反射获得注解：" + annotation);
+		}
+		// 通过反射获得注解的 value 的值
+		TableAnnotation tableAnnotation = (TableAnnotation) c1.getAnnotation(TableAnnotation.class);
+		String value = tableAnnotation.value();
+		System.out.println("通过反射获得注解的 value 的值：" + value);
+		// 获得指定的注解
+		Field field = c1.getDeclaredField("id");
+		FieldAnnotation annotation = field.getAnnotation(FieldAnnotation.class);
+		System.out.println("获得指定的注解：" + annotation.columnName());
+		System.out.println("获得指定的注解：" + annotation.type());
+		System.out.println("获得指定的注解：" + annotation.length());
 	}
 }
 
 /**
  * 实体类：只有属性和构造方法
  */
+@TableAnnotation("db_student")
 class ClassRunStruct{
+	@FieldAnnotation(columnName = "db_name", type = "varchar", length = 10)
 	private String name;
+	@FieldAnnotation(columnName = "db_id", type = "int", length = 3)
 	private int id;
-	private int age;
-	public int height;
+	@FieldAnnotation(columnName = "db_age", type = "int", length = 10)
+	public int age;
 	
 	public ClassRunStruct(){}
 	
@@ -124,4 +149,26 @@ class ClassRunStruct{
 				       ", age=" + age +
 				       '}';
 	}
+}
+
+
+/**
+ * 类名（对应数据库中的表）的注解
+ */
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@interface TableAnnotation{
+	String value();
+}
+
+
+/**
+ * 属性（对应数据库中的列字段）的注解
+ */
+@Target(ElementType.FIELD)
+@Retention(RetentionPolicy.RUNTIME)
+@interface FieldAnnotation{
+	String columnName();
+	String type();
+	int length();
 }
