@@ -19,11 +19,15 @@
 	</properties>
 
 	<dependencies>
+		<!--	启动器	-->
+		<!--web依赖：Tomcat, dispatcherServlet.xml-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!--spring-boot-starter 所有的 SpringBoot 依赖都是使用这个开头的-->
+		<!--  单元测试	-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -38,6 +42,7 @@
 	</dependencies>
 
 	<build>
+		<!--	打 jar 包插件	-->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

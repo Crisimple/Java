@@ -1,0 +1,13 @@
+person:
+  name: A
+  age: 13
+  happy: false
+  birth: 2020/09/09
+  maps: {K1: v1, k2: v2}
+  lists: 
+    - code
+    - music
+    - girl
+dog:
+  name: 小狗狗
+  age: 1
