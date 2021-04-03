@@ -1,3 +1,11 @@
+# 配置数据库信息
+spring:
+  datasource:
+    url: jdbc://mysql://10.188.36.4:8101/sf01399094_wnp
+    username: sf01399094
+    password: 1q2w3e@sf
+
+
 person:
   name: A
   age: 13
@@ -11,3 +19,8 @@ person:
 dog:
   name: 小狗狗
   age: 1
+email:
+  eName: email
+  eAge: 27
+  eValue: test@qq.com
+  

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--  Spring配置  -->
+    <bean id="dog" class="auto_assembly.Dog"/>
+    <bean id="cat" class="auto_assembly.Cat"/>
+    <bean id="cat2" class="auto_assembly.Cat"/>
+<!--    <bean id="user" class="auto_assembly.User" autowire="byName">-->
+    <bean id="user" class="auto_assembly.User" autowire="byType">
+        <property name="cat" ref="cat2"/>
+        <property name="dog" ref="dog"/>
+        <property name="str" value="tester"/>
+    </bean>
+</beans>
