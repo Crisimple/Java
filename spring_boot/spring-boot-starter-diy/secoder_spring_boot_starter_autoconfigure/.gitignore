@@ -31,11 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-.DS_Store
-Java.iml
-mvnw
-mvnw.cmd
-pom.xml
-.idea
-.mvn/wrapper
-out/

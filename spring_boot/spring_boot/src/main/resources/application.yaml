@@ -1,0 +1,20 @@
+person:
+  name: secoder${random.uuid} # 随机uuid
+  age: ${random.int}  # 随机int
+  happy: false
+  birthday: 2021/4/24
+  email: secoder
+  maps: {k1: v1, k2: v2}
+  lists: [code, gril, gitar]
+  dog:
+    name: 大黄
+    age: 7
+server:
+  port:8181
+spring:
+  datasource:
+    username: root
+    password: password
+    # ?serverTimezone=UTC解决时区的报错
+    url: jdbc:mysql://localhost:3306/mybatis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
