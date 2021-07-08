@@ -7,7 +7,7 @@ import org.junit.jupiter.api.*;
  * @Description
  */
 @DisplayName("这是我的JUnit测试类")
-public class JUnit5Test {
+public class JunitAnnotationTest {
 
     @BeforeAll
     public static void init(){
