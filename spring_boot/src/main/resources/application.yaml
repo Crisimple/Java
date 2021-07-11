@@ -1,16 +1,16 @@
+server:
+  port:8081
 person:
   name: secoder${random.uuid} # 随机uuid
-  age: ${random.int}  # 随机int
-  happy: false
-  birthday: 2021/4/24
-  email: secoder
-  maps: {k1: v1, k2: v2}
-  lists: [code, gril, gitar]
-  dog:
-    name: 大黄
-    age: 7
-server:
-  port:8181
+#  age: ${random.int}  # 随机int
+#  happy: false
+#  birthday: 2021/4/24
+#  email: secoder
+#  maps: {k1: v1, k2: v2}
+#  lists: [code, gril, gitar]
+#  dog:
+#    name: 大黄
+#    age: 7
 spring:
   datasource:
     username: root

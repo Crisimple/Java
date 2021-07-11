@@ -18,6 +18,7 @@ import java.util.Map;
  * @Time 2021-07-11 22:59
  * @Description
  */
+
 @Component  // 注册bean
 // https://docs.spring.io/spring-boot/docs/2.4.5/reference/html/appendix-configuration-metadata.html#configuration-metadata-annotation-processor
 @ConfigurationProperties(prefix = "person")

@@ -1,11 +1,15 @@
 package com.secode.spring_boot.pojo;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 /**
  * @Author secoder
  * @File Dog
  * @Time 2021-07-11 23:07
  * @Description
  */
+
 @Component  // 注册bean
 public class Dog {
 
